@@ -16,6 +16,7 @@ RUN apk --no-cache add \
   && npm install -g \
     # Install Nightwatch.js:
     nightwatch@'<1.0' \
+  && npm install -g chance \
   # Clean up obsolete files:
   && rm -rf \
     /tmp/* \

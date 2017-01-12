@@ -4,6 +4,8 @@
 
 FROM alpine:3.4
 
+
+
 MAINTAINER Sebastian Tschan <mail@blueimp.net>
 
 RUN apk --no-cache add \
@@ -21,6 +23,8 @@ RUN apk --no-cache add \
   && rm -rf \
     /tmp/* \
     /root/.npm
+
+RUN apk add --no-cache bash gawk sed grep bc coreutils
 
 # Add node system user/group with uid/gid 1000.
 # This is a workaround for boot2docker issue #581, see

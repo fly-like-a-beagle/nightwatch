@@ -14,15 +14,10 @@ RUN apk --no-cache add \
     # Install NodeJS:
     nodejs-lts \
     # Install ffmpeg for video recording:
-    ffmpeg \
-  && npm install -g \
-    # Install Nightwatch.js:
-    nightwatch@'<1.0' \
-  && npm install -g chance \
-  # Clean up obsolete files:
-  && rm -rf \
-    /tmp/* \
-    /root/.npm
+    ffmpeg
+
+RUN npm install -g nightwatch@'<1.0'
+RUN npm install -g chance
 
 RUN apk add --no-cache bash gawk sed grep bc coreutils
 

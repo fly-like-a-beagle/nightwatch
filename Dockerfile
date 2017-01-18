@@ -17,7 +17,7 @@ RUN apk --no-cache add \
     ffmpeg
 
 RUN npm install -g nightwatch@'<1.0'
-RUN npm install -g chance-cli
+RUN npm install -g chance
 
 RUN apk add --no-cache bash gawk sed grep bc coreutils
 

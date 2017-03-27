@@ -12,7 +12,7 @@ RUN apk --no-cache add \
     # Install tini, a tiny but valid init for containers:
     tini \
     # Install NodeJS:
-    nodejs-lts \
+    nodejs>6.10 \
     # Install ffmpeg for video recording:
     ffmpeg
 
